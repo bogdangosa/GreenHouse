@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+.green{
+    color:#28F75F;
+}
+.tab{
+    margin-left: 2rem;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.Title{
+    position: relative;
+    padding: 1rem;
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 8%;
+    color:#28F75F;
+    transition: 0.7s ease;
+}
+
+
+.Title::before{
+    content:'';
+    width: 75%;
+    height: 70%; 
+    border:3px solid #000;
+    position: absolute;
+    bottom:0;
+    right: 7%;
+    transition: 0.7s ease;
+}
+
+.Title::after{
+    content:'';
+    width: 75%;
+    height: 70%; 
+    border:3px solid #28F75F;
+    position: absolute;
+    top:0;
+    left: 7%;
+    transition: 0.7s ease;
+}
+
+.Title:hover{
+    color:#000;
+}
+
+.Title:hover::after{
+    border:3px solid #000;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.Title:hover::before{
+    right:50%;
+    bottom:50%;
+    transform: translate(50%,50%);
+}
+
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 0 5%;
+    height: 5rem;
+    color:#f3f3f3;
+    background: #3F3D56;
+    position: fixed;
+    transition: 1s;
+    z-index: 5;
+}
+
+.OnTop{
+    height: 6rem;
+    background:none;
+}
+.Logo{
+    font-size: 2rem;
+}
+.nav-bar{
+    list-style-type: none;
+}
+.nav-links{
+    display: inline;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    transition: 0.5s;
+
+}
+.nav-links a:hover{
+    color:#28F75F;
+}
+
+.Home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('Images/HomeBackground.jpeg') center no-repeat;
+    background-size: cover;
+    color:#f3f3f3;
+}
+
+.HomeText1{
+    padding-top: 35vh;
+    padding-left: 5%;
+}
+.HomeText2{
+    padding-left: 15%;
+    display: inline;
+}
+
+.CallToActionButton{
+    display: inline;
+    font-size: 1.5rem;
+    padding: 0.8rem 3rem;
+    float: right;
+    margin-right: 5%;
+    background-color: #28F75F;
+    border-radius: 2rem;
+    color:#fff;
+    border:3px solid #28F75F;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.CallToActionButton:hover{
+    background-color:#28f75f00;
+    color:#28F75F
+}
+
+.InfoSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 0 5%;
+    height: 30vh;
+    background-color: #3F3D56;
+    color:#f3f3f3;
+}
+.InfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 30%;
+    border:3px solid #f3f3f3;
+    border-radius: 0.5rem;
+    transition: 0.5s ease;
+}
+.InfoContainer:hover{
+    border:3px solid #28F75F
+}
+
+.sign{
+    width: 10vh;
+    height: 10vh;
+    padding: 1rem;
+}
+
+.AboutUs{
+    width: 86%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 6rem 7% 0 7%;
+}
+
+.AboutIlustration{
+    width: 40%;
+    height: 50%;
+}
+.AboutTextSection{
+    width: 45%;
+}
+
+
+
+.Projects{
+    width: 86%;
+    min-height: 100vh;
+    padding: 6rem 7% 0 7%;
+}
+
+.ProjectsInfoSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProjectsTextSection{
+    width: 50vw;
+}
+
+.BuildingSVG{
+    width: 20vw;
+    height: 20vw;
+}
+
+.ProjectsLibrarySection{
+    padding-top: 2rem;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Project{
+    height: 90%;
+    padding: 0 2.5%;
+    background-color: #3F3D56;
+    color:#f3f3f3;
+    font-size: 2rem;
+    writing-mode: vertical-lr;
+    text-align: center;
+    border-radius: 1rem;
+    transform: rotate(180deg);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.Project:hover{
+    background-color: #dbdbdb;
+    color:#3F3D56;
+}
+
+.Contact{
+    width: 86%;
+    height: 100vh;
+    padding: 6rem 7% 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+
+}
+.FormSVG{
+    width: 30%;
+    height: 60%;
+}
+.FormSection{
+    width: 60%;
+}
+
+.ContactForm{
+    display: grid;
+    grid-template-areas: 
+    'FirstName LastName'
+    'Email Email'
+    'Message Message'
+    'Message Message'
+    'SubmitButton SubmitButton';
+    gap: 1rem ;
+}
+.FirstNameInput{
+    grid-area: FirstName;
+}
+.LastNameInput{
+    grid-area: LastName;
+}
+.EmailInput{
+    grid-area: Email;
+}
+.MessageInput{
+    grid-area: Message;
+}
+.SubmitButton{
+    grid-area: SubmitButton;
+    color:#28F75F;
+    background-color: #fff;
+    border:3px solid #28F75F;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+.SubmitButton:hover{
+    color:#fff;
+    background-color: #28F75F;
+}
+
+.SubmitButton:focus{
+    outline: none;
+}
+
+.FormInput{
+    border:none;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    transition: 0.5s ease;
+}
+.FormInput:focus{
+    
+    outline: 2px solid #28F75F;
+}
+
+.Footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 6rem;
+    background-color: #3F3D56;
+    color:#f3f3f3;
+}
+
+
+@media(max-width:1200px){
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .CallToActionButton{
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+    }
+    .Title{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:700px){
+    .nav-bar{
+        display: none;
+    }
+
+    .Contact{
+        display: none;
+    }
+}
